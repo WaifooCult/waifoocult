@@ -101,6 +101,11 @@
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="traits" placeholder="Describe your ideal waifu (looks, vibe, hobbies)" rows="4" required></textarea>
       <input type="hidden" name="_captcha" value="false">
+      <div class="checkbox-row">
+        <input type="checkbox" id="emailAgree" name="agree">
+        <label for="emailAgree">I agree to receive waifu updates and emails from <a href="https://waifoocult.github.io" target="_blank">WaifooCult</a>.</label>
+      </div>
+      <p id="errorMsg">Oops, you forgot to tick checkbox to get your waifu.</p>
       <input type="hidden" name="_next" value="https://waifoocult.github.io/waifugeneration/thanks.html">
       <button type="submit">Generate Waifu</button>
     </form>
