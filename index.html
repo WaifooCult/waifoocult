@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WaifooCult</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     body {
@@ -27,13 +24,12 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
     }
 
     .container {
       background-color: white;
       max-width: 500px;
-      width: 100%;
+      width: 90%;
       padding: 30px;
       border-radius: 25px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -42,14 +38,8 @@
     }
 
     @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     h1 {
@@ -64,19 +54,30 @@
       margin-bottom: 20px;
     }
 
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 12px;
       font-size: 1em;
-      font-family: inherit;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
     }
 
     button {
       background-color: #ff5fa2;
+      margin-top: 10px;
       color: white;
       border: none;
       padding: 12px 24px;
@@ -84,7 +85,6 @@
       border-radius: 20px;
       cursor: pointer;
       transition: background 0.3s;
-      font-family: inherit;
     }
 
     button:hover {
@@ -99,115 +99,60 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    .checkbox-row {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-top: 15px;
-      gap: 10px;
-    }
-
-    .checkbox-row input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      cursor: pointer;
-      accent-color: #ff5fa2;
-    }
-
-    .checkbox-row label {
-      font-size: 0.9em;
-      color: #ff5fa2;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    #errorMsg {
-      color: red;
-      font-size: 0.85em;
-      margin-top: 8px;
-      display: none;
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div
-      class="tenor-gif-embed"
-      data-postid="24447519"
-      data-share-method="host"
-      data-aspect-ratio="1.77778"
-      data-width="100%"
-    >
-      <a href="https://tenor.com/view/dress-up-darling-my-dress-up-darling-anime-smile-anime-happy-gif-24447519"
-        >Dress Up Darling My Dress Up Darling GIF</a
-      >
-      from
-      <a href="https://tenor.com/search/dress+up+darling-gifs">Dress Up Darling GIFs</a>
+    <div class="tenor-gif-embed" data-postid="24447519" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%">
+      <a href="https://tenor.com/view/dress-up-darling-my-dress-up-darling-anime-smile-anime-happy-gif-24447519">Dress Up Darling My Dress Up Darling GIF</a>
+      from <a href="https://tenor.com/search/dress+up+darling-gifs">Dress Up Darling GIFs</a>
     </div>
     <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
     <h1>Create Your Waifu</h1>
-    <p>Describe your dream anime waifu and get her story + image in your email!</p>
-    <form
-      action="https://formsubmit.co/YOUR_EMAIL_HERE"
-      method="POST"
-      id="waifuForm"
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea
-        name="traits"
-        placeholder="Describe your ideal waifu (looks, vibe, hobbies)"
-        rows="4"
-        required
-      ></textarea>
-      <input type="hidden" name="_captcha" value="false" />
+    <p>🩷 Describe your dream anime waifu & get her story in your email! Your waifu will be revealed if you wish 🩷</p>
 
-      <div class="checkbox-row">
-        <input
-          type="checkbox"
-          id="emailAgree"
-          name="agree"
-          required
-        />
-        <label for="emailAgree"
-          >I agree to receive waifu updates and emails from WaifooCult.</label
-        >
-      </div>
-      <p id="errorMsg">Oops, you forgot to tick checkbox to get your waifu.</p>
+    <form id="waifuForm" action="https://formsubmit.co/waifoocult@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="traits" placeholder="Describe your ideal waifu (looks, vibe, hobbies)" rows="4" required></textarea>
+  
+  <!-- Hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://waifoocult.github.io/waifugeneration//thanks.html">
 
-      <input
-        type="hidden"
-        name="_next"
-        value="https://waifoocult.github.io/waifugeneration/thanks.html"
-      />
-      <button type="submit">Generate Waifu</button>
-    </form>
+  <!-- Checkbox with label -->
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+  <input type="checkbox" id="emailAgree" name="agree" style="margin: 0; width: 18px; height: 18px;">
+  <label for="emailAgree" style="font-size: 0.85em; margin: 0;">
+   I agree to receive waifu updates and emails from WaifooCult.
+  </label>
+</div>
+
+  
+  <p id="errorMsg" style="color: red; font-size: 0.85em; margin-top: 8px; display: none;">Oops, you forgot to tick checkbox to get your waifu.</p>
+
+  <!-- Submit -->
+  <button type="submit">Generate Waifu</button>
+</form>
+
+<script>
+  document.getElementById('waifuForm').addEventListener('submit', function (e) {
+    const checkbox = document.getElementById('emailAgree');
+    const errorMsg = document.getElementById('errorMsg');
+
+    if (!checkbox.checked) {
+      e.preventDefault(); // Stop form from submitting
+      errorMsg.style.display = 'block';
+    } else {
+      errorMsg.style.display = 'none';
+    }
+  });
+</script>
+
   </div>
-
-  <script>
-    // Optional: Show custom error message if checkbox not checked
-    const form = document.getElementById("waifuForm");
-    const checkbox = document.getElementById("emailAgree");
-    const errorMsg = document.getElementById("errorMsg");
-
-    form.addEventListener("submit", (e) => {
-      if (!checkbox.checked) {
-        e.preventDefault();
-        errorMsg.style.display = "block";
-        checkbox.focus();
-      } else {
-        errorMsg.style.display = "none";
-      }
-    });
-  </script>
 </body>
 </html>
