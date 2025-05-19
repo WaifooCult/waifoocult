@@ -140,15 +140,31 @@
 </form>
 
 <script>
-  document.getElementById('waifuForm').addEventListener('submit', function (e) {
+  document.getElementById('waifuForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // prevent default form submission
+
     const checkbox = document.getElementById('emailAgree');
     const errorMsg = document.getElementById('errorMsg');
 
     if (!checkbox.checked) {
-      e.preventDefault(); // Stop form from submitting
       errorMsg.style.display = 'block';
+      return;
     } else {
       errorMsg.style.display = 'none';
+    }
+
+    const formData = new FormData(this);
+
+    // 👉 Replace this with your actual deployed backend URL
+    const response = await fetch('https://waifucreation.onrender.com', {
+      method: 'POST',
+      body: formData
+    });
+
+    if (response.ok) {
+      window.location.href = 'thanks.html'; // or your custom thank you page
+    } else {
+      alert('Something went wrong! Please try again later.');
     }
   });
 </script>
